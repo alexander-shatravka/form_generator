@@ -25,6 +25,7 @@ let bottomOfPage = document.querySelector('#bottom');
 
 addButton.onclick = function () {
     this.parentNode.insertAdjacentHTML(`BeforeEnd`, newQuestion);
+    bottomOfPage.scrollIntoView();
 }
 
 $('.form-of-questions').on('click', '.question-container', focusing);
