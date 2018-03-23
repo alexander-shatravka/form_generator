@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form generator</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <h1 class="form-name">Новая форма</h1>
+        <a class="send-button">Отправить</a>
+    </div>
+</div>
+
+<div class="form-container clearfix">
+    <div class="forms-header">
+        <div class="question-answer-toggler clearfix">
+            <a class="questions toggler toggler-active">Вопросы</a>
+            <a class="answers toggler">Ответы</a>
+        </div>
+    </div>
+
+        <form action="" class="form-of-questions">
+            <fieldset class="form-header question-container">
+                <textarea type="text" class="type-name" placeholder="Название формы"></textarea>
+                <textarea class="form-description" placeholder="Описание" rows="1"></textarea>
+            </fieldset>
+
+            <i id="add-question" class = "fas fa-plus-circle"></i>
+
+            <fieldset class="question-container">
+
+                <div class="question-content-one-from">
+                    <textarea type="text" class="question-header" placeholder="Вопрос"></textarea>
+                    <ul class="list-of-variants">
+                        <label class="variant-container">
+                            <input type="radio" class="radio-button" checked = 'false'>
+                            <textarea class="variant" placeholder="Ответ"></textarea>
+                        </label>
+                    </ul>
+                    <label class="add-one-from-variant">
+                        <input type="radio" class="radio-button">
+                        <span>Добавить вариант</span>
+                    </label>
+                </div>
+
+                <div class="question-type-container clearfix">
+                    <div class="current-type">
+                        <i class="type-icon fas fa-dot-circle-o"></i>
+                        <span class="type">Один из списка</span>
+                        <i class="dropdown-arrow fas fa-caret-down"></i>
+                    </div>
+                    <ul class="select-type">
+                        <li class="choose-one-from"><i class="type-icon fas fa-dot-circle-o"></i>
+                            <span class="type">Один из списка</span>
+                        </li>
+                        <li class="choose-text"><i class="type-icon fas fa-align-left"></i>
+                            <span class="type">Текст(строка)</span>
+                        </li>
+                        <li class="choose-list"><i class="type-icon  fas fa-caret-square-o-down"></i>
+                            <span class="type">Раскрывающийся список</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <i class="delete-question fas fa-trash"></i>
+            </fieldset>
+    </form>
+</div>
+
+<div id="content-for-script">
+
+    <div class="question-content-one-from">
+        <textarea type="text" class="question-header" placeholder="Вопрос"></textarea>
+        <ul class="list-of-variants">
+            <label class="variant-container">
+                <input type="radio" class="radio-button" checked = 'false'>
+                <textarea class="variant" placeholder="Ответ"></textarea>
+            </label>
+        </ul>
+        <label class="add-one-from-variant">
+            <input type="radio" class="radio-button">
+            <span>Добавить вариант</span>
+        </label>
+    </div>
+
+    <div class="question-content-text">
+        <textarea type="text" class="question-header" placeholder="Вопрос"></textarea>
+        <span class="short-answer">Краткий ответ</span>
+    </div>
+
+    <div class="question-content-list">
+        <textarea type="text" class="question-header" placeholder="Вопрос"></textarea>
+        <ul class="list-of-variants-drop">
+            <li>
+                <label class="variant-container-drop">
+                    <span class="number-variant"></span>
+                    <textarea class="dropdown-variant" placeholder="Вариант ответа"></textarea>
+                </label>
+            </li>
+        </ul>
+        <label class="add-dropdown-variant">
+            <span>Добавить вариант списка</span>
+        </label>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/libs.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
