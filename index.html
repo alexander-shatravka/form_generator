@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form generator</title>
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="fonts/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
@@ -31,7 +31,7 @@
                 <textarea class="form-description" placeholder="Описание" rows="1"></textarea>
             </fieldset>
 
-            <i id="add-question" class = "fas fa-plus-circle"></i>
+            <i id="add-question">+</i>
 
             <fieldset class="question-container">
 
@@ -39,12 +39,12 @@
                     <textarea type="text" class="question-header" placeholder="Вопрос"></textarea>
                     <ul class="list-of-variants">
                         <label class="variant-container">
-                            <input type="radio" class="radio-button" checked = 'false'>
+                            <i class="radio-button"></i>
                             <textarea class="variant" placeholder="Ответ"></textarea>
                         </label>
                     </ul>
                     <label class="add-one-from-variant">
-                        <input type="radio" class="radio-button">
+                        <i class="radio-button"></i>
                         <span>Добавить вариант</span>
                     </label>
                 </div>
@@ -79,12 +79,12 @@
         <textarea type="text" class="question-header" placeholder="Вопрос"></textarea>
         <ul class="list-of-variants">
             <label class="variant-container">
-                <input type="radio" class="radio-button" checked = 'false'>
+                <i class="radio-button"></i>
                 <textarea class="variant" placeholder="Ответ"></textarea>
             </label>
         </ul>
         <label class="add-one-from-variant">
-            <input type="radio" class="radio-button">
+            <i class="radio-button"></i>
             <span>Добавить вариант</span>
         </label>
     </div>
@@ -110,6 +110,8 @@
     </div>
 
 </div>
+
+<a href="#bottom" class="bottom-of-page"></a>
 
 <script type="text/javascript" src="js/libs.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>

@@ -4,7 +4,7 @@ let  dropdownList = $('.question-content-list')[0].innerHTML;
 
 let radioVariant =
     '<label class="variant-container">\n' +
-    '   <input type="radio" class="radio-button">\n' +
+    '   <i class="radio-button"></i>\n' +
     '   <textarea class="variant" placeholder="Ответ"></textarea>\n' +
     '   <i class="delete-variant fas fa-times"></i>\n' +
     '</label>';
@@ -14,14 +14,14 @@ let dropdownVariant =
     '<label class="variant-container-drop">\n' +
     '<span class="number-variant"></span>\n' +
     '   <textarea class="dropdown-variant" placeholder="Вариант ответа"></textarea>\n' +
-    '   <i class="delete-variant fas fa-times"></i>\n' +
+    '   <i class="delete-variant-drop fas fa-times"></i>\n' +
     '</label>\n'+
     '</li>';
 
 let newQuestion = '<fieldset class="question-container">' + $('.question-container')[1].innerHTML + '</fieldset>';
 let addButton = $('#add-question')[0];
-
 let dropdownArrow = document.querySelector('.dropdown-arrow');
+let bottomOfPage = document.querySelector('#bottom');
 
 addButton.onclick = function () {
     this.parentNode.insertAdjacentHTML(`BeforeEnd`, newQuestion);
@@ -98,6 +98,10 @@ function focusing(event) {
 
     if(target.className === 'delete-variant fas fa-times') {
         target.parentNode.remove();
+    }
+
+    if(target.className === 'delete-variant-drop fas fa-times') {
+        target.parentNode.parentNode.remove();
     }
 };
 

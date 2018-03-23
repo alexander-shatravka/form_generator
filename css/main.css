@@ -60,9 +60,9 @@ form {
   margin: 0 auto 50px;
   background-color: white;
   min-height: 200px;
-  -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
-  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
 }
 
 .forms-header {
@@ -104,8 +104,11 @@ form {
   outline: none;
   border: none;
   padding: 10px 40px;
-  margin-top: 20px;
   min-height: 180px;
+}
+
+.form-header .focus-field{
+  box-shadow: none;
 }
 
 .type-name {
@@ -173,8 +176,7 @@ input:focus {
   position: relative;
   outline: none;
   border: none;
-  padding: 10px 40px 50px;
-  margin-top: 20px;
+  padding: 20px 40px 50px;
   min-height: 150px;
 }
 
@@ -217,10 +219,22 @@ input:focus {
   z-index: 1;
   position: fixed;
   right: 18%;
-  bottom: 20%;
+  bottom: 22%;
+  width: 25px;
+  height: 25px;
+  display: block;
+  text-align: center;
   cursor: pointer;
-  color: #757575;
-  font-size: 25px;
+  font-size: 20px;
+  font-weight: 100;
+  background-color: #757575;
+  color: white;
+  line-height: 25px;
+  border-radius: 50%;
+}
+
+#add-question:hover{
+  background-color: #505050;
 }
 
 @media screen and (max-width: 1320px) {
@@ -247,15 +261,14 @@ input:focus {
   }
 }
 
-
-#add-question:hover{
-  color: #505050;
-}
-
 .list-of-variants-drop {
   list-style: disc;
   color: #9F9F9F;
   font-weight: bold;
+}
+
+.list-of-variants-drop li{
+  margin-left: 15px;
 }
 
 .variant , .dropdown-variant{
@@ -279,9 +292,15 @@ input:focus {
   color: #757575;
 }
 
-.add-one-from-variant {
+.add-one-from-variant, .add-dropdown-variant {
   color: #989898;
   cursor: pointer;
+  margin-top: 5px;
+  visibility: hidden;
+}
+
+.focus-field .add-one-from-variant, .focus-field .add-dropdown-variant {
+  visibility: visible;
 }
 
 .add-one-from-variant:hover, .add-dropdown-variant:hover{
@@ -289,21 +308,20 @@ input:focus {
   padding-bottom: 2px;
 }
 
-.add-dropdown-variant {
-  color: #989898;
-  cursor: pointer;
-}
-
-
-.delete-variant{
+.delete-variant, .delete-variant-drop{
   float: right;
   color: #757575;
   font-size: 12px;
   cursor: pointer;
   font-weight: 100;
+  visibility: hidden;
 }
 
-.delete-variant:hover{
+.focus-field .delete-variant-drop, .focus-field .delete-variant{
+  visibility: visible;
+}
+
+.delete-variant:hover, .delete-variant-drop:hover{
   color: #505050;
   cursor: pointer;
 }
@@ -317,8 +335,14 @@ input:focus {
 }
 
 .radio-button {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
   margin-right: 5px;
-  border: 1px solid #989898;
+  border-radius: 50%;
+  border: 2px solid #989898;
+  font-size: 20px;
+  margin-bottom: -2px;
 
 }
 
@@ -407,6 +431,12 @@ input:focus {
   margin-right: 3px;
 }
 
+
+.bottom-of-page{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
 
 
 
