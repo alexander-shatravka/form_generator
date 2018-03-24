@@ -12,7 +12,6 @@ let radioVariant =
 let dropdownVariant =
     '<li>\n' +
     '<label class="variant-container-drop">\n' +
-    '<span class="number-variant"></span>\n' +
     '   <textarea class="dropdown-variant" placeholder="Вариант ответа"></textarea>\n' +
     '   <i class="delete-variant-drop fas fa-times"></i>\n' +
     '</label>\n'+
@@ -87,7 +86,6 @@ function focusing(event) {
             this.parentNode.remove();
         }
     }
-
 
     if(target.innerText === 'Добавить вариант') {
         target.parentNode.previousElementSibling.insertAdjacentHTML(`BeforeEnd`, radioVariant);

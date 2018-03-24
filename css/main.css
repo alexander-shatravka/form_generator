@@ -262,8 +262,8 @@ input:focus {
 }
 
 .list-of-variants-drop {
-  list-style: disc;
-  color: #9F9F9F;
+  list-style: decimal;
+  color: #757575;
   font-weight: bold;
 }
 
@@ -282,10 +282,10 @@ input:focus {
 }
 
 .dropdown-variant{
-  margin-left: -5px;
   position: relative;
-  bottom: -3px;
   font-size: 14px;
+  bottom: -2px;
+  margin-left: 2px;
 }
 
 .dropdown-variant::placeholder{
@@ -343,7 +343,7 @@ input:focus {
   border: 2px solid #989898;
   font-size: 20px;
   margin-bottom: -2px;
-
+  cursor: pointer;
 }
 
 .question-type-container {
